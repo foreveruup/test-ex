@@ -1,12 +1,12 @@
-def serialize(numbers): #Преобразование массива чисел в компактную строку.
+def serialize(numbers): # преобразование массива чисел в компактную строку.
 
     if not numbers:
         return ""
 
-    # Сортируем числа для максимизации эффективности
+    # сортируем числа для максимизации эффективности
     numbers.sort()
 
-    # Initialize variables
+    # инициализация
     prev_number = numbers[0]
     count = 1
     serialized_string = ""
@@ -19,7 +19,7 @@ def serialize(numbers): #Преобразование массива чисел 
             prev_number = number
             count = 1
 
-    # Add the last number
+    # добавление последней цифры
     serialized_string += f"{prev_number}:{count}"
 
     return serialized_string
